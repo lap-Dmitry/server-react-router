@@ -9,8 +9,23 @@ const app = new Koa();
 app.use(cors());
 app.use(koaBody({json: true}));
 
-let posts = [];
-let nextId = 1;
+let nextId = 3;
+let posts = [
+    {
+        id: 1,
+        content: "Пост о React",
+        avatar: "https://i.pravatar.cc/40",
+        name: "Сергей Иванов",
+        created: Date.now(),
+    },
+    {
+        id: 2,
+        content: "React и что его окружает",
+        avatar: "https://i.pravatar.cc/40",
+        name: "Сергей Иванов",
+        created: Date.now(),
+    },
+];
 
 const router = new Router();
 
